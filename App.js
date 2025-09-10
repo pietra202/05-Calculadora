@@ -4,12 +4,12 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
-} from 'react-native';
-import { useState } from 'react';
+} from "react-native";
+import { useState } from "react";
 
 export default function App() {
-  const [valorDigitado, setValorDigitado] = useState('');
-  const [resultado, setResultado] = useState('');
+  const [valorDigitado, setValorDigitado] = useState("");
+  const [resultado, setResultado] = useState("");
 
   const handlePress = (value) => {
     setValorDigitado((prev) => prev + value);
@@ -21,13 +21,13 @@ export default function App() {
       setResultado(valorDigitado);
       setValorDigitado(calcResult.toString());
     } catch (error) {
-      setResultado('Erro');
+      setResultado("Erro");
     }
   };
 
   const handleClear = () => {
-    setResultado('');
-    setValorDigitado('');
+    setResultado("");
+    setValorDigitado("");
   };
 
   return (
@@ -42,22 +42,26 @@ export default function App() {
         <View style={styles.row}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('7')}>
+            onPress={() => handlePress("7")}
+          >
             <Text style={styles.buttonText}>7</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('8')}>
+            onPress={() => handlePress("8")}
+          >
             <Text style={styles.buttonText}>8</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('9')}>
+            onPress={() => handlePress("9")}
+          >
             <Text style={styles.buttonText}>9</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress(' / ')}>
+            onPress={() => handlePress(" / ")}
+          >
             <Text style={styles.buttonText}>÷</Text>
           </TouchableOpacity>
         </View>
@@ -65,22 +69,26 @@ export default function App() {
         <View style={styles.row}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('4')}>
+            onPress={() => handlePress("4")}
+          >
             <Text style={styles.buttonText}>4</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('5')}>
+            onPress={() => handlePress("5")}
+          >
             <Text style={styles.buttonText}>5</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('6')}>
+            onPress={() => handlePress("6")}
+          >
             <Text style={styles.buttonText}>6</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress(' * ')}>
+            onPress={() => handlePress(" * ")}
+          >
             <Text style={styles.buttonText}>×</Text>
           </TouchableOpacity>
         </View>
@@ -88,22 +96,26 @@ export default function App() {
         <View style={styles.row}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('1')}>
+            onPress={() => handlePress("1")}
+          >
             <Text style={styles.buttonText}>1</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('2')}>
+            onPress={() => handlePress("2")}
+          >
             <Text style={styles.buttonText}>2</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('3')}>
+            onPress={() => handlePress("3")}
+          >
             <Text style={styles.buttonText}>3</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress(' - ')}>
+            onPress={() => handlePress(" - ")}
+          >
             <Text style={styles.buttonText}>-</Text>
           </TouchableOpacity>
         </View>
@@ -114,17 +126,20 @@ export default function App() {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('0')}>
+            onPress={() => handlePress("0")}
+          >
             <Text style={styles.buttonText}>0</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress('.')}>
+            onPress={() => handlePress(".")}
+          >
             <Text style={styles.buttonText}>,</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handlePress(' + ')}>
+            onPress={() => handlePress(" + ")}
+          >
             <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
         </View>
@@ -142,46 +157,46 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
     padding: 20,
-    backgroundColor: '#222',
+    backgroundColor: "#222",
   },
   display: {
     marginBottom: 20,
     padding: 20,
     minHeight: 100,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    justifyContent: "center",
+    alignItems: "flex-end",
     borderRadius: 10,
-    backgroundColor: '#333',
+    backgroundColor: "#333",
   },
   inputText: {
     fontSize: 28,
-    color: '#fff',
+    color: "#fff",
   },
   resultText: {
     fontSize: 24,
-    color: '#aaa',
-    fontWeight: 'bold',
+    color: "#aaa",
+    fontWeight: "bold",
   },
   buttons: {
     marginBottom: 40,
   },
   row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: 10,
   },
   button: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
     margin: 5,
     paddingVertical: 20,
     borderRadius: 10,
-    backgroundColor: '#444',
+    backgroundColor: "#444",
   },
   buttonText: {
     fontSize: 24,
-    color: '#fff',
+    color: "#fff",
   },
 });
